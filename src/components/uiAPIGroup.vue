@@ -1,6 +1,6 @@
 <template>
   <div class="select demo-card-wide mdl-card mdl-shadow--2dp">
-    <h2 @click="isOpened=!isOpened">Group 1</h2>
+    <h3 @click="isOpened=!isOpened">Group 1</h3>
     <i :class="['mdl-icon-toggle__label material-icons', {focus: isOpened}]">keyboard_arrow_down</i>
     <ul :class="{closed: !isOpened}">
       <li><Card>API 1</Card></li>
@@ -11,8 +11,11 @@
   </div>
 </template>
 <style scoped>
-  h2{
+  h3{
+    margin: 0;
     cursor: pointer;
+    text-align: left;
+    padding: 10px 0 10px 15px;
   }
   ul li{
     display: flex;
