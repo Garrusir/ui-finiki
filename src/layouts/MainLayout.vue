@@ -1,6 +1,6 @@
 <template>
   <div class="main__main">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
       <ui-header/>
     <ui-sidebar/>
       <main class="mdl-layout__content">
@@ -26,5 +26,8 @@
   .main__main {
     flex-grow: 1;
     display: flex;
+  }
+  .page-content {
+    padding: 0 16px;
   }
 </style>
