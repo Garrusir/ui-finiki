@@ -1,6 +1,6 @@
 <template>
   <div class="main__main">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <ui-header/>
     <ui-sidebar/>
       <main class="mdl-layout__content">
