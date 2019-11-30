@@ -2,8 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Login from './views/Login.vue'
-import APIGroup from './views/APIGroup.vue'
 import API from './views/API.vue'
+import APIGroup from './views/APIGroup.vue'
+import APIPage from './views/APIPage.vue'
 
 export default new Router({
   mode: 'history',
@@ -28,6 +29,11 @@ export default new Router({
     path: '/api',
     meta: {layout: 'main'},
     component: API,
+  },
+  {
+    path: '/api-page',
+    meta: {layout: 'main'},
+    component: APIPage,
   },
   ]
 })
