@@ -9,10 +9,6 @@
         </div>
       </main>
     </div>
-
-
-
-
   </div>
 </template>
 <script>
@@ -28,7 +24,6 @@
 </script>
 <style>
   .main__main {
-    background-color: red;
     flex-grow: 1;
     display: flex;
   }
