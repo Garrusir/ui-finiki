@@ -36,7 +36,8 @@
     },
     methods: {
       goToRoute(route) {
-        console.log('going to ...', route)
+        // console.log('going to ...', route)
+        this.$store.dispatch('getProjects', )
       }
     }
   }
