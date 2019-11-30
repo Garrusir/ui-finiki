@@ -8,6 +8,7 @@
     :links="links"
     :nodes="nodes"
     :editable="false"
+    style="margin-top:20px"
   />
 </template>
 <script>
