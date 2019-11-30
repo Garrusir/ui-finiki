@@ -9,10 +9,12 @@
   .demo-card-wide.mdl-card {
     width: 100%;
     min-height: 50px;
-    background-color: #efefef;
-    margin: 20px;
+    background-color: #bdbdbd;
+    margin: 10px 0;
+    box-shadow: 0 1px 1px rgba(0,0,0, .1);
   }
   .demo-card-wide > .mdl-card__title {
     color: #000;
+    padding: 10px;
   }
 </style>
