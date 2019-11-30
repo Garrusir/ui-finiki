@@ -29,5 +29,7 @@
   }
   .page-content {
     padding: 0 16px;
+    width: 960px;
+    margin: 0 auto;
   }
 </style>
