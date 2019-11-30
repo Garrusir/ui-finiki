@@ -9,5 +9,6 @@
 <style>
   .empty__main {
     background-color: #ccc;
+    flex-grow: 1;
   }
 </style>

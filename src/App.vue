@@ -23,7 +23,7 @@ export default {
   },
   computed: {
     layout(){
-      return (this.$route.meta || 'main') + "-layout"
+      return (this.$route.meta.layout || 'main') + "-layout"
     }
   }
 }
@@ -36,10 +36,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  display: flex;
 }
+body {
+  margin: 0;
 
+
+}
 h1, h2 {
   font-weight: normal;
+  margin: 0;
 }
 
 ul {
