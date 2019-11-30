@@ -32,7 +32,7 @@
     }),
     methods: {
       login(){
-        console.log(this.username);
+        this.$store.dispatch('login');
       }
     }
   }

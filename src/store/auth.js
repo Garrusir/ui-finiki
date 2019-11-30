@@ -1,8 +1,6 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import axios from 'axios'
 
-Vue.use(Vuex);
-export default new Vuex.Store({
+export default {
   state: {
     count: 0
   },
@@ -17,6 +15,11 @@ export default new Vuex.Store({
     }
   },
   actions: {
-
+    login({commit}) {
+      console.log('auth...');
+      axios.get('​https://finiki.vrrk.ru/api/project​/get').then(()=> {
+        console.log('done');
+      })
+    }
   }
-})
+}
