@@ -30,6 +30,10 @@
   .page-content {
     padding: 16px;
     /*width: 960px;*/
-    margin: 0 auto;
+    display: flex;
+    flex-grow: 1;
+  }
+  .mdl-layout__content {
+    display: flex;
   }
 </style>

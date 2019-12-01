@@ -16,7 +16,7 @@
         <Diagram />
       </div>
     </div>
-    <div>
+    <div v-else>
       <p>Нет выбранных сервисов</p>
     </div>
   </div>

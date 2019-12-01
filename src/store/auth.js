@@ -5,6 +5,7 @@ export default {
     email: '',
     code: '',
     isAuth: !!localStorage.getItem('user-token'),
+    // isAuth: true,
     token: localStorage.getItem('user-token') || ''
   },
   getters: {

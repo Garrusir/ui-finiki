@@ -13,6 +13,7 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
   {
+    name: 'main',
     path: "/",
     meta: {layout: 'main'},
     component: Home
@@ -22,6 +23,9 @@ export default new Router({
     path: "/login",
     meta: {layout: 'empty'},
     component: Login,
+    beforeEnter: (to, from, next) => {
+      (!store.getters.getAuth) ? next() : next('/')
+    },
   },
   {
     path: '/api-group',
@@ -53,6 +57,11 @@ export default new Router({
     path: '/add-project',
     meta: {layout: 'main'},
     component: Form,
+    beforeEnter: (to, from, next) => {
+      (store.getters.getAuth) ? next() : next('/login')
+    },
   },
+  { path: "*", component: Home }
+
   ]
 })
