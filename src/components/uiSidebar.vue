@@ -38,7 +38,7 @@
         componentName: 'ComponentName'
       },
       {
-        name: 'F&Q',
+        name: 'FAQ',
         componentName: 'ComponentName'
       }]
       }
