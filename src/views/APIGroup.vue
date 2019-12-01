@@ -4,7 +4,6 @@
     <p>Description of the group</p>
     <div>
       <Card />
-      <Card />
     </div>
   </div>
 </template>

@@ -30,7 +30,7 @@
   .page-content {
     padding: 0 16px;
     margin-top: 16px;
-    width: 960px;
+    /*width: 960px;*/
     margin: 0 auto;
   }
 </style>
