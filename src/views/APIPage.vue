@@ -1,20 +1,23 @@
 <template>
   <div>
-    <h1>API Page</h1>
-    <div>
+    <h1>API Details</h1>
+    <div v-if="API">
       <p>Responsible: D.V.Lutkova</p>
       <div class="block">
         <h2>Request</h2>
-        <CodeViewer :JSONValue="{value: 'Hello'}" />
+        <CodeViewer :JSONValue="API.request" />
       </div>
       <div class="block">
         <h2>Response</h2>
-        <CodeViewer :JSONValue="{value: 'Hello', data: {name: 'Hello', key: 65}}" />
+        <CodeViewer :JSONValue="API.response" />
       </div>
       <div class="block">
         <h2>Visualisation</h2>
         <Diagram />
       </div>
+    </div>
+    <div>
+      <p>Нет выбранных сервисов</p>
     </div>
   </div>
 </template>
@@ -24,6 +27,17 @@
   export default{
     components: {
       Diagram, CodeViewer
+    },
+    computed: {
+      API() {
+        // console.log(this.$store.getters.getSelectedAPI)
+        // return {
+        //   request: {value: 'Hello'},
+        //   response: {value: 'Hello', data: {name: 'Hello', key: 65}},
+        //   status: 'done'
+        // }
+        return this.$store.getters.getSelectedAPI
+      }
     }
   }
 </script>

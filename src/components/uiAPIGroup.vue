@@ -1,15 +1,55 @@
 <template>
   <div class="select demo-card-wide mdl-card mdl-shadow--2dp">
-    <h3 @click="isOpened=!isOpened">Group 1</h3>
+    <h3 @click="isOpened=!isOpened">{{ title }}</h3>
     <i :class="['mdl-icon-toggle__label material-icons', {focus: isOpened}]">keyboard_arrow_down</i>
     <ul :class="{closed: !isOpened}">
-      <li><Card>API 1</Card></li>
-      <li><Card>API 2</Card></li>
-      <li><Card>API 3</Card></li>
-      <li><Card>API 4</Card></li>
+      <li
+      v-for="item in APIList"
+      :key="item.id"
+      ><Card
+      :id="item.id"
+      :name="item.name"
+      /></li>
     </ul>
   </div>
 </template>
+<script>
+  import Card from './uiAPICard';
+  export default{
+    props: ['title'],
+    data: () =>({
+      isOpened: false,
+      activeAPI: ''
+    }),
+    components:{
+      Card
+    },
+    methods: {
+    },
+    computed: {
+      APIList(){
+        return [
+        {
+          id: 1,
+          name: 'API 1'
+        },
+        {
+          id: 2,
+          name: 'API 2'
+        },
+        {
+          id: 3,
+          name: 'API 3'
+        },
+        {
+          id: 4,
+          name: 'API 4'
+        },
+        ]
+      }
+    }
+  }
+</script>
 <style scoped>
   h3{
     margin: 0;
@@ -49,14 +89,3 @@
     color: #000;
   }
 </style>
-<script>
-  import Card from './uiAPICard';
-  export default{
-    data: () =>({
-      isOpened: false,
-    }),
-    components:{
-      Card
-    }
-  }
-</script>
