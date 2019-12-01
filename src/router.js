@@ -49,6 +49,7 @@ export default new Router({
     },
   },
   {
+    name: 'form',
     path: '/add-project',
     meta: {layout: 'main'},
     component: Form,

@@ -35,7 +35,7 @@
       },
       {
         name: 'Add project',
-        componentName: 'ComponentName'
+        componentName: 'form',
       },
       {
         name: 'FAQ',

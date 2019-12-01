@@ -28,8 +28,7 @@
     display: flex;
   }
   .page-content {
-    padding: 0 16px;
-    margin-top: 16px;
+    padding: 16px;
     /*width: 960px;*/
     margin: 0 auto;
   }
