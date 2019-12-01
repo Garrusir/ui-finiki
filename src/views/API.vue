@@ -52,13 +52,15 @@
 <style>
   .api-main {
     display: flex;
-    flex: row nowrap;
+    flex-grow: 1;
+    flex-flow: row nowrap;
   }
   .api-main_list {
     flex-grow: 1;
   }
   .api-main_card {
     width: 400px;
+    margin-left: 16px;
     overflow-y: scroll;
   }
 
