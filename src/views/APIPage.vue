@@ -12,6 +12,11 @@
         <CodeViewer :JSONValue="API.response" />
       </div>
       <div class="block">
+        <p class="state"><span class="title">State: </span> <span :class="['card', {'green': API.state === 'up'}, {'red': API.state === 'down'}]">{{API.state}} </span></p>
+        
+      </div>
+
+      <div class="block">
         <h2>Visualisation</h2>
         <Diagram />
       </div>
@@ -44,5 +49,22 @@
 <style scoped>
   .block{
     margin: 20px 0;
+  }
+  .block .state {
+    text-align: left;
+    font-size: 24px;
+  }
+  .title {
+    font-weight: bold;
+  }
+  .card {
+    padding: 2px 15px;
+    border-radius: 5px;
+  }
+  .green {
+    background-color: #62f071;
+  }
+  .red {
+    background-color: #e23737;
   }
 </style>

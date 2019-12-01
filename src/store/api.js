@@ -48,7 +48,7 @@ export default {
       commit('setAPI', {
           request: {value: 'Hello'},
           response: {value: 'Hello', data: {name: 'Hello', key: Math.random(65)}},
-          status: 'done'
+          state: 'up'
         })
     },
   }
