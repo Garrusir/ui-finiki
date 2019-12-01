@@ -5,6 +5,7 @@ import Login from './views/Login.vue'
 import API from './views/API.vue'
 import APIGroup from './views/APIGroup.vue'
 import APIPage from './views/APIPage.vue'
+import Form from './views/AddForm.vue'
 
 export default new Router({
   mode: 'history',
@@ -34,6 +35,11 @@ export default new Router({
     path: '/api-page',
     meta: {layout: 'main'},
     component: APIPage,
+  },
+  {
+    path: '/add-project',
+    meta: {layout: 'main'},
+    component: Form,
   },
   ]
 })
