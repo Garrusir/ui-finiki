@@ -8,7 +8,7 @@
       <nav class="mdl-navigation mdl-layout--large-screen-only">
           <i @click="isOpened=!isOpened" class="mdl-icon-toggle__label material-icons">account_circle</i>
           <div :class="['dropdown', {closed: !isOpened}]">
-            <p>Exit</p>
+            <p @click="logout()">Exit</p>
           </div>
       </nav>
         </div>
@@ -20,6 +20,10 @@
       goToRoute(route) {
         // console.log('going to ...', route)
         this.$store.dispatch('getProjects', )
+      },
+      logout(){
+        this.$store.commit('logout');
+        this.$router.push({name: 'login'})
       }
     },
     data:() => ({
