@@ -11,8 +11,6 @@
   </div>
 </template>
 <script>
-  import API from '../views/API';
-
   export default {
     methods: {
       go(component){
@@ -30,6 +28,10 @@
       links() {
         return [
       {
+        name: 'Home',
+        componentName: 'home'
+      },
+      {
         name: 'Projects',
         componentName: 'api'
       },
@@ -40,7 +42,8 @@
       {
         name: 'FAQ',
         componentName: 'ComponentName'
-      }]
+      },
+      ]
       }
     }
   }
