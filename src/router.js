@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import store from './store'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Login from './views/Login.vue'
@@ -17,6 +18,7 @@ export default new Router({
     component: Home
   },
   {
+    name: 'login',
     path: "/login",
     meta: {layout: 'empty'},
     component: Login,
@@ -25,16 +27,26 @@ export default new Router({
     path: '/api-group',
     meta: {layout: 'main'},
     component: APIGroup,
+    beforeEnter: (to, from, next) => {
+      (store.getters.getAuth) ? next() : next('/login')
+    },
   },
   {
+    name: 'api',
     path: '/api',
     meta: {layout: 'main'},
     component: API,
+    beforeEnter: (to, from, next) => {
+      (store.getters.getAuth) ? next() : next('/login')
+    }
   },
   {
     path: '/api-page',
     meta: {layout: 'main'},
     component: APIPage,
+    beforeEnter: (to, from, next) => {
+      (store.getters.getAuth) ? next() : next('/login')
+    },
   },
   {
     path: '/add-project',

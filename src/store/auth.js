@@ -27,6 +27,11 @@ export default {
     },
     setAuth(state, isAuth) {
       state.isAuth = isAuth;
+    },
+    logout(state){
+      state.isAuth = false;
+      localStorage.removeItem('user-token');
+      console.log('logout');
     }
   },
   actions: {

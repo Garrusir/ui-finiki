@@ -1,6 +1,5 @@
 <template>
   <div class="login-form">
-    {{ $store.getters.getAuth }}
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
   <main class="mdl-layout__content">
     <div class="mdl-card mdl-shadow--6dp">
