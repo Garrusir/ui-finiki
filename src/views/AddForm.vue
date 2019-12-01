@@ -74,4 +74,7 @@
   #dropdown{
     width: 300px;
   }
+  #mycard{
+    margin: 0 auto;
+  }
 </style>

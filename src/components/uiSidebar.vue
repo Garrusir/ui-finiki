@@ -29,7 +29,7 @@
         return [
       {
         name: 'Home',
-        componentName: 'home'
+        componentName: 'main'
       },
       {
         name: 'Projects',
