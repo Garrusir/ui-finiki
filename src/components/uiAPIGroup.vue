@@ -1,7 +1,7 @@
 <template>
   <div class="select demo-card-wide mdl-card mdl-shadow--2dp">
     <h3 @click="isOpened=!isOpened">Group 1</h3>
-    <i :class="['mdl-icon-toggle__label material-icons', {focus: isOpened}]">keyboard_arrow_down</i>
+    <i @click="isOpened=!isOpened" :class="['mdl-icon-toggle__label material-icons', {focus: isOpened}]">keyboard_arrow_down</i>
     <ul :class="{closed: !isOpened}">
       <li><Card>API 1</Card></li>
       <li><Card>API 2</Card></li>
