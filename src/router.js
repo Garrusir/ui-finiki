@@ -26,6 +26,7 @@ export default new Router({
     component: APIGroup,
   },
   {
+    name: 'api',
     path: '/api',
     meta: {layout: 'main'},
     component: API,

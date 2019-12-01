@@ -1,30 +1,45 @@
 <template>
-  <div class="mdl-layout__drawer">
+  <div class="mdl-layout__drawer" ref="drawer" >
     <span class="mdl-layout-title">Title</span>
     <nav class="mdl-navigation ">
       <a
       v-for="link in links"
       :key="link.name"
+      @click="go(link.componentName)"
       class="mdl-navigation__link">{{link.name}}</a>
     </nav>
   </div>
 </template>
 <script>
+  import API from '../views/API';
+
   export default {
+    methods: {
+      go(component){
+        this.$router.push({name : component});
+        this.$refs.drawer.setAttribute('aria-hidden', true);
+        this.$refs.drawer.classList.remove('is-visible');
+        document.querySelector('.mdl-layout__obfuscator').classList.remove('is-visible');
+
+      }
+    },
+    data: () => ({
+      showDrawer: false,
+    }),
     computed: {
       links() {
         return [
       {
-        name: 'Nav Link1',
-        component: 'ComponentName'
+        name: 'Projects',
+        componentName: 'api'
       },
       {
-        name: 'Nav Link2',
-        component: 'ComponentName'
+        name: 'Add project',
+        componentName: 'ComponentName'
       },
       {
-        name: 'Nav Link3',
-        component: 'ComponentName'
+        name: 'F&Q',
+        componentName: 'ComponentName'
       }]
       }
     }
